@@ -11,39 +11,40 @@
 </head>
 <!-- Enllaç a l'arxiu JavaScript -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/funcions.js"></script>
 
 
 <div class="container">
     <body>
         <!-- Aquí comença el formulari de la pàgina web. El visitant de la pàgina hi introduirà les dades. -->
-        <form action="index.html" onsubmit="return calculHipoteca()">
+        <form action="index.html" onsubmit="return afegirAlumne()">
             <h1>
                 Alumnes
             </h1>
             <div class="form-group">
                 <label for="text">DNI:</label>
-                <input type="text" class="form-control" id="dni">
+                <input type="text" class="form-control" id="dni" placeholder="dni">
               </div>
             
               <div class="form-group">
                 <label for="text">Nom:</label>
-                <input type="text" class="form-control" id="nom">
+                <input type="text" class="form-control" id="nom" placeholder="nom">
               </div>
             
               <div class="form-group">
                 <label for="text">Llinatges:</label>
-                <input type="text" class="form-control" id="llinatges">
+                <input type="text" class="form-control" id="llinatges" placeholder="llinatges">
               </div>
             
             <div class="form-group">
                 <label for="email">Correu electrònic:</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" placeholder="email">
               </div>
 
               <div class="form-group">
                 <label for="number">Nota:</label>
-                <input type="number" class="form-control" id="nota" min="0" max="10">
+                <input type="number" class="form-control" id="nota" min="0" max="10" placeholder="nota">
               </div>
 
                 <input type="submit" value="Enviar">
@@ -56,7 +57,7 @@
             <div class="container">
                 <h2>Alumnes</h2>
                             
-                <table class="table">
+                <table class="table" id="taula">
                   <thead>
                     <tr>
                       <th>DNI</th>
